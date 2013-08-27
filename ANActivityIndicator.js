@@ -11,14 +11,14 @@ var ANActivityIndicator = function ( text ) {
   var message = text || 'Loading...'
 
   var _isAndroid = ( Ti.Platform.osname === 'android' );
-  var _padding = 20;//( _isAndroid ) ? 20 : 20;
+  var _padding = '25dp';//( _isAndroid ) ? 20 : 20;
   var _style;
 
-  var bgWidth = 320;
-  var bgHeight = ( _isAndroid ) ? 180 : 100;
+  var bgWidth = '320dp';
+  var bgHeight = ( _isAndroid ) ? '200dp' : '120dp';
   var infoWindow;
 
-  var textWidth = ( message.length > 13 ) ? 260 : Ti.UI.SIZE;
+  var textWidth = ( message.length > 13 ) ? '260dp' : Ti.UI.SIZE;
 
   this.infoWindow = Ti.UI.createWindow( {
     touchEnabled : true
@@ -43,7 +43,7 @@ var ANActivityIndicator = function ( text ) {
 
   this.activityIndicator = Ti.UI.createActivityIndicator( {
     style : _style,
-    top : 10,
+    top : '15dp',
     height : Ti.UI.SIZE,
     width : Ti.UI.SIZE
   } );
@@ -52,18 +52,18 @@ var ANActivityIndicator = function ( text ) {
 
   this.message = Ti.UI.createLabel( {
     text : message,
-    top : 10,
+    top : '10dp',
     left : _padding,
     right : _padding,
     color : '#fff',
     textAlign : 'center',
     font : {
       fontFamily :  (_isAndroid) ? 'Droid Sans' : 'Helvetica Neue',
-      fontSize : 18,
+      fontSize : '18dp',
       fontWeight : 'bold'
     },
     wordwrap : false,
-    height : 44,
+    height : '44dp',
     width : textWidth 
   } );
   background.add( this.message );
