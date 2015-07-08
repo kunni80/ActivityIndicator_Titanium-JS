@@ -8,7 +8,7 @@
  * @param {Object} params
  */
 var ANActivityIndicator = function ( text ) {
-  var message = text || 'Loading...'
+  var message = text || 'Loading...';
 
   var _isAndroid = ( Ti.Platform.osname === 'android' );
   var _padding = '25dp';//( _isAndroid ) ? 20 : 20;
